@@ -1,14 +1,14 @@
 import os
 
 
-def maintainer():
+def maintainer(water, milk, coffee, money, machine_on):
     os.system('cls')
     right_passwd = False
     password = input("Please type the password for maintainer: ")
     while not right_passwd:            
         if password == "987654321":                
             print("Hello maintainer")                                
-            machine_prompt= int(input("What are you looking for? 1:Report \t2:Refill \t3:Shut Down\n"))                 
+            machine_prompt= int(input("What are you looking for? 1:Report \t2:Refill \t3:Shut Down \t4:Leave\n"))                 
             if machine_prompt == 1:
                 print(f"\nThe resources availabe are: \nWater: {water}ml \nMilk: {milk}ml \nCoffee: {coffee}g \nMoney: ${money}\n")
             elif machine_prompt == 2:
@@ -35,8 +35,16 @@ def maintainer():
                         refill = False
             elif machine_prompt == 3:
                 right_passwd = True
-                print("The Coffee Machine is Turning Off...")
-                machine_on = False
+                print("The Coffee Machine is Turning Off...")    
+                machine_on = False            
+                return machine_on
+            elif machine_prompt == 4:
+                print("Leaving maintainer terminal...")
+                right_passwd = True
+                machine_on = True
+                os.system('cls')
+                return machine_on
         else:
             print("\nWrong Password\n")
             right_passwd = True
+    
