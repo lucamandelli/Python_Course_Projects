@@ -35,6 +35,7 @@ while not stop_operation:
     if keep_calculating == "n":
         stop_operation = True
     elif keep_calculating == "y":
+        os.system('cls')
         while next_operation:
             same_calculation = input(f"Do you want to make another operation with the {answer}? type 'y' or 'n': ")
             if same_calculation == "y":
@@ -55,5 +56,8 @@ while not stop_operation:
                         stop_operation = True
                     else:
                         os.system('cls')
+                if keep_calculating == "y":
+                    os.system('cls')
+        next_operation = True
     else:
         print("Please type 'y' or 'n': ")
