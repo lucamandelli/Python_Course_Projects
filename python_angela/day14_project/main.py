@@ -12,5 +12,5 @@ def main():
             machine_on = maintainer.maintainer(water, milk, coffee, money, machine_on)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':    
     main()
