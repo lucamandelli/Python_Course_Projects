@@ -1,5 +1,5 @@
 import os
-
+import art
 
 def add(n1, n2):
     return n1 + n2
@@ -23,6 +23,7 @@ operations = {
 stop_operation = False
 next_operation = True
 while not stop_operation:
+    print(art.logo)
     num1 = float(input("What's the first number? "))
     for key in operations:
         print(key)
@@ -36,6 +37,7 @@ while not stop_operation:
         stop_operation = True
     elif keep_calculating == "y":
         os.system('cls')
+        print(art.logo)
         while next_operation:
             same_calculation = input(f"Do you want to make another operation with the {answer}? type 'y' or 'n': ")
             if same_calculation == "y":
@@ -58,6 +60,7 @@ while not stop_operation:
                         os.system('cls')
                 if keep_calculating == "y":
                     os.system('cls')
+                    print(art.logo)
         next_operation = True
     else:
         print("Please type 'y' or 'n': ")
