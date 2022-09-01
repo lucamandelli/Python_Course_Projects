@@ -1,0 +1,4 @@
+begin with while ask if want to play a black jack game
+pick random cards for user and cpu and show user's card, only one of cpu card and sum user's cards value
+ask if user wants to pick another card
+if yes, sum the new values if over 21 game over user loose
