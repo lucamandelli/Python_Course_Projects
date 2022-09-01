@@ -49,3 +49,4 @@ def maintainer(water, milk, coffee, money, machine_on):
             right_passwd = True
             machine_on = True
             return machine_on
+

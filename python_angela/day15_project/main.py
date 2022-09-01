@@ -1,6 +1,18 @@
 import os
 import time
 
+# espresso:
+# 50ml water
+# 18g coffee
+# latte:
+# 200ml water
+# 24g coffee
+# 150ml milk
+# cappuccino:
+# 250ml water
+# 24g coffee
+# 100ml milk
+
 
 def main():
     import maintainer
