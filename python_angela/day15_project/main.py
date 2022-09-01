@@ -23,7 +23,12 @@ def main():
     milk = 1000
     coffee_resource = 200
     money = 0.0
-    
+    # resource_dictionary = {
+    #     "water" : 1000,
+    #     "milk" : 1000,
+    #     "coffee" : 200,
+    #     "money" : 0.0
+    # }
     resources_list = [water, milk, coffee_resource, money]
     
     while machine_on:
