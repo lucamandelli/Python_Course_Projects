@@ -1,7 +1,7 @@
 import os
 
 
-def maintainer(water, milk, coffee, money, machine_on):
+def maintainer(resources_list, machine_on):
     os.system('cls')
     right_passwd = False
     password = input("Please type the password for maintainer: ")
@@ -10,7 +10,7 @@ def maintainer(water, milk, coffee, money, machine_on):
             print("Hello maintainer")                                
             machine_prompt= int(input("What are you looking for? 1:Report \t2:Refill \t3:Shut Down \t4:Leave\n"))                 
             if machine_prompt == 1:
-                print(f"\nThe resources availabe are: \nWater: {water}ml \nMilk: {milk}ml \nCoffee: {coffee}g \nMoney: ${money}\n")
+                print(f"\nThe resources availabe are: \nWater: {resources_list[0]}ml \nMilk: {resources_list[1]}ml \nCoffee: {resources_list[2]}g \nMoney: ${resources_list[3]}\n")
             elif machine_prompt == 2:
                 refill = True
                 while refill:
@@ -18,15 +18,15 @@ def maintainer(water, milk, coffee, money, machine_on):
                     which_fill = input("Which one you want to refill: \t1:Water \t2:Milk \t3:Coffee\n")
                     if which_fill == "1":
                         water_refill = int(input("How much water in mililiters: "))
-                        water += water_refill
+                        resources_list[0] += water_refill
                         more_refill = input("Refill another one? type 'yes' or 'no' ")
                     elif which_fill == "2":
                         milk_refill = int(input("How much milk in mililiters: "))
-                        milk += milk_refill
+                        resources_list[1] += milk_refill
                         more_refill = input("Refill another one? type 'yes' or 'no' ")
                     elif which_fill == "3":
                         coffee_refill = int(input("How much coffee in grams: "))
-                        coffee += coffee_refill
+                        resources_list[2] += coffee_refill
                         more_refill = input("Refill another one? type 'yes' or 'no' ")
                     else:
                         print("ERROR, please type 1, 2 or 3")
