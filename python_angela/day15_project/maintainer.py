@@ -47,4 +47,5 @@ def maintainer(water, milk, coffee, money, machine_on):
         else:
             print("\nWrong Password\n")
             right_passwd = True
-            
+            machine_on = True
+            return machine_on
