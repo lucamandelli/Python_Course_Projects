@@ -1,7 +1,4 @@
 
-
-
-
 def main():
     import os
     import time
