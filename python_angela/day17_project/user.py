@@ -8,15 +8,16 @@ class User:
 
     def show(self):
         show_list = [self.username, self.age, self.email, self.followers, self.following]
-        print(show_list)
+        print(' '.join(str(x) for x in show_list))
+        # print(map(str, show_list)) this prints the memory address
 
     def gain_followers(self, user):
         user.followers += 1
         self.following += 1
 
 
-user_1 = User("lucamandelli", "21", "luca.part.mand@gmail.com", 1550, 0)
-user_2 = User("rebecafernands", "18", "rebecamello28@gmail.com", 2800, 0)
+user_1 = User("lucamandelli", 21, "luca.part.mand@gmail.com", 1550, 0)
+user_2 = User("rebecafernands", 18, "rebecamello28@gmail.com", 2800, 0)
 user_1.show()
 user_2.show()
 user_1.gain_followers(user_2)
