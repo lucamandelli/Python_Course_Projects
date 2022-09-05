@@ -1,10 +1,7 @@
-
-
-
 def espresso(resource_list):
     import time
     profit = payment()
-    if successful_transaction(profit, 1.5) == True:
+    if successful_transaction(profit, 1.5):
         if resource_list[0] >= 50 and resource_list[2] >= 18:
             print("Espresso bein made...")
             time.sleep(4)
@@ -17,10 +14,11 @@ def espresso(resource_list):
     else:
         time.sleep(2)
 
+
 def latte(resource_list):
     import time
     profit = payment()
-    if successful_transaction(profit, 2.5) == True:
+    if successful_transaction(profit, 2.5):
         if resource_list[0] >= 200 and resource_list[1] >= 150 and resource_list[2] >= 24:
             print("Latte bein made...")
             time.sleep(4)
@@ -34,10 +32,11 @@ def latte(resource_list):
     else:
         time.sleep(2)
 
+
 def cappuccino(resource_list):
     import time
     profit = payment()
-    if successful_transaction(profit, 2.5) == True:
+    if successful_transaction(profit, 2.5):
         if resource_list[0] >= 250 and resource_list[1] >= 100 and resource_list[2] >= 24:
             print("Cappuccino bein made...")
             time.sleep(4)
@@ -51,6 +50,7 @@ def cappuccino(resource_list):
     else:
         time.sleep(2)
 
+
 def payment():
     print("Please insert coins.")
     total = int(input("How many quarters? ")) * 0.25
@@ -58,6 +58,7 @@ def payment():
     total += int(input("How many nickles? ")) * 0.05
     total += int(input("How many pennies? ")) * 0.01
     return total
+
 
 def successful_transaction(money_received, drink_cost):
     if money_received >= drink_cost:
